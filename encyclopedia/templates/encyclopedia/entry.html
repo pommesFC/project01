@@ -6,7 +6,7 @@
 
 {% block body %}
 {{content|safe}}
-<form action="{% url 'edit' titles=title %}" method="post" >
+<form class='newEntry' action="{% url 'edit' titles=title %}" method="post" >
     <input type="submit" value=" Edit {{title}}" name="{{title}}">
     {% csrf_token %}
     {{form}}
